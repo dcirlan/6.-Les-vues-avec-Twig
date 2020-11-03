@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Twig Quest{% endblock %}
+
+
+{% block content %}
+    <div>
+        {% for product in products |slice(0, 3) %}
+            {{product}}
+        {% endfor %}
+    </div>
+
+    <div>
+        {% for product in products |slice(3, 2) %}
+            {{product}}
+        {% endfor %}
+    </div>
+{% endblock %}
